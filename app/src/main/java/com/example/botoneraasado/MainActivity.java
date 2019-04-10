@@ -14,10 +14,11 @@ public class MainActivity extends AppCompatActivity {
     MediaPlayer sonido3;
 
 
-    Button b0;
     Button b1;
     Button b2;
     Button b3;
+    Button b4;
+    Button b5;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,13 +31,14 @@ public class MainActivity extends AppCompatActivity {
         sonido3 =MediaPlayer.create(this,R.raw.sonido3);
 
 
-        b0 = (Button)findViewById(R.id.button);
-        b1 = (Button)findViewById(R.id.button2);
-        b2 = (Button)findViewById(R.id.button3);
-        b3 = (Button)findViewById(R.id.button4);
+        b1 = (Button)findViewById(R.id.button);
+        b2 = (Button)findViewById(R.id.button2);
+        b3 = (Button)findViewById(R.id.button3);
+        b4 = (Button)findViewById(R.id.button4);
+        b5 = (Button)findViewById(R.id.button5);
 
 
-        b0.setOnClickListener(new View.OnClickListener() {
+        b1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
@@ -45,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        b1.setOnClickListener(new View.OnClickListener() {
+        b2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
@@ -54,7 +56,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        b2.setOnClickListener(new View.OnClickListener() {
+        b3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
@@ -63,20 +65,29 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        b3.setOnClickListener(new View.OnClickListener() {
+        b4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-             if (!sonido0.isPlaying()){
+             if (!sonido1.isPlaying()){
                  sonido3.start();
 
              }
 else{
-
-
     sonido0.pause();
              }
 
+
+            }
+        });
+
+
+
+        b5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                sonido2.start();
 
             }
         });
